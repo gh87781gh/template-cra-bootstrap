@@ -1,0 +1,12 @@
+html,
+body,
+#root {
+  @include mySize(100%, 100%);
+  background-color: $color-black-default;
+}
+
+.aha-article {
+  @include mySize(calc(100% - $layout-nav-width), 100%);
+  display: inline-block;
+  margin-left: $layout-nav-width;
+}

@@ -1,0 +1,28 @@
+@mixin clearFix() {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+@mixin mySize($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin ulReset() {
+  padding-left: unset;
+  margin-bottom: unset;
+  list-style-type: none;
+}
+
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.adat-center {
+  @include center();
+}

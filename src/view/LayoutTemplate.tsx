@@ -1,52 +1,19 @@
-function App() {
-  const test = () => {
-    console.log('test');
-  };
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button type="button" className="btn btn-primary">
-          Primary
-        </button>
-        <button type="button" className="btn btn-secondary">
-          Secondary
-        </button>
-        <button type="button" className="btn btn-success">
-          Success
-        </button>
-        <button type="button" className="btn btn-danger">
-          Danger
-        </button>
-        <button type="button" className="btn btn-warning">
-          Warning
-        </button>
-        <button type="button" className="btn btn-info">
-          Info
-        </button>
-        <button type="button" className="btn btn-light">
-          Light
-        </button>
-        <button type="button" className="btn btn-dark">
-          Dark
-        </button>
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-        <button type="button" className="btn btn-link">
-          Link
-        </button>
-      </header>
-    </div>
+import Nav from './layout/Nav';
+import Home from './Home';
+
+function LayoutTemplate() {
+  return (
+    <article className="aha-article">
+      <Nav />
+      <HashRouter>
+        <Routes>
+          <Route element={<Home />} path="/" />
+        </Routes>
+      </HashRouter>
+    </article>
   );
 }
 
-export default App;
+export default LayoutTemplate;

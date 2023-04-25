@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/main.scss';
-import App from './App';
+import LayoutTemplate from './view/LayoutTemplate';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <LayoutTemplate />
   </React.StrictMode>
 );
 

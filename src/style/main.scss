@@ -1,5 +1,10 @@
-@import "./abstracts/bootstrap";
+@import './abstracts/mixin';
+@import './abstracts/variables';
+@import './abstracts/bootstrap';
+
+@import './layout/article';
+@import './layout/nav';
 
 * {
-  border: 1px solid #000;
+  box-sizing: border-box;
 }
